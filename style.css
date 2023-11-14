@@ -1,0 +1,62 @@
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dragging {
+    border: 2px dashed #000; /* Add a dashed border to indicate dragging */
+    background-color: #f0f0f0; /* Add a background color to highlight the dragging element */
+    cursor: grab;
+}
+
+tr:hover {
+    background-color: #f0f0f0; /* Light gray background on hover */
+    cursor: pointer; /* Change cursor on hover to indicate interactivity */
+}
+
+tr.selected {
+    background-color: #a0c0ff; /* Light blue background when selected */
+    color: #ffffff; /* White text color when selected */
+}
+
+#encounterbody tr.selected input {
+    border: 2px solid #ffffff; /* Increase border thickness for selected input fields */
+    border-radius: 5px; /* Add rounded corners for a softer look */
+    padding: 2px; /* Add a bit of padding for visual separation */
+    outline: none; /* Remove default focus outline */
+}
+
+tr {
+    padding: 5px;
+  }
+
+th {
+    text-align: left;
+}
+
+.field {
+    display: inline-block; /* Set to inline-block to respect width */
+}
+
+.input.hidden {
+    display: none;
+}
+
+.field.hidden {
+    display: none;
+}
+
+/* Additional styling for consistency */
+.input, .field {
+    margin: 5px 0; /* Add some margin for spacing */
+    width: 200px;
+}
+
+

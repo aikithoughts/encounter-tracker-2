@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encounter Tracker (JavaScript)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Encounter Tracker</h1>
+    <table id="encountertable" class="encounter-table">
+        <thead>
+            <tr id="headerrow">
+                <th class="heading">Name</th>
+                <th class="heading">Initiative</th>
+                <th class="heading">Type</th>
+                <th class="heading">Current Hitpoints</th>
+                <th class="heading">Total Hitpoints</th>
+            </tr>
+        </thead>
+        <tbody id="encounterbody">
+            <tr draggable="true">
+                <td>
+                    <input class="input hidden" id='gven-name' type='text' value='Gven'>
+                    <div class="field">Gven</div>
+                </td>
+                <td>
+                    <input class="input hidden" id='gven-init' type='number'>
+                    <div class="field">0</div>
+                </td>
+                <td>
+                    <input class="input hidden" id='gven-type' type='text' value='player'>
+                    <div class="field">player</div>
+                </td>
+                <td>
+                    <input class="input hidden" id='gven-currenthp' type='number' value='45'>
+                    <div class="field">45</div>
+                </td>
+                <td>
+                    <input class="input hidden" id='gven-totalhp' type='number' value='45'>
+                    <div class="field">45</div>
+                </td>
+            </tr>
+            <tr draggable="true">
+                <td>
+                    <input class="input hidden" id='grindlefoot-name' type='text' value='Grindlefoot'>
+                    <div class="field">Grindlefoot</div>
+                </td>
+                <td>
+                    <input class="input hidden" id='grindlefoot-init' type='number'>
+                    <div class="field">0</div>
+                </td>
+                <td>
+                    <input class="input hidden" id='grindlefoot-type' type='text' value='player'>
+                    <div class="field">player</div>
+                </td>
+                <td>
+                    <input class="input hidden" id='grindlefoot-currenthp' type='number' value='28'>
+                    <div class="field">28</div>
+                </td>
+                <td>
+                    <input class="input hidden"  id='grindlefoot-totalhp' type='number' value='28'>
+                    <div class="field">28</div>
+                </td>
+            </tr>
+            <tr draggable="true">
+                <td>
+                    <input class="input hidden"  id='dolor-name' type='text' value='Dolor'>
+                    <div class="field">Dolor</div>
+                </td>
+                <td>
+                    <input class="input hidden"  id='dolor-init' type='number'>
+                    <div class="field">0</div>
+                </td>
+                <td>
+                    <input class="input hidden"  id='dolor-type' type='text' value='player'>
+                    <div class="field">player</div>
+                </td>
+                <td>
+                    <input class="input hidden"  id='dolor-currenthp' type='number' value='37'>
+                    <div class="field">37</div>
+                </td>
+                <td>
+                    <input class="input hidden"  id='dolor-totalhp' type='number' value='37'>
+                    <div class="field">37</div>
+                </td>
+            </tr>
+            <tr draggable="true">
+                <td>
+                    <input class="input hidden"  id='monde-name' type='text' value='Monde'>
+                    <div class="field">Monde</div>
+                </td>
+                <td>
+                    <input class="input hidden"  id='monde-init' type='number'>
+                    <div class="field">0</div>
+                </td>
+                <td>
+                    <input class="input hidden"  id='monde-type' type='text' value='player'>
+                    <div class="field">player</div>
+                </td>
+                <td>
+                    <input class="input hidden"  id='monde-currenthp' type='number' value='32'>
+                    <div class="field">32</div>
+                </td>
+                <td>
+                    <input class="input hidden"  id='monde-totalhp' type='number' value='32'>
+                    <div class="field">32</div>
+                </td>
+            </tr>
+            <tr draggable="true">
+                <td>
+                    <input class="input hidden"  id='bilwin-name' type='text' value='Bilwin'>
+                    <div class="field">Bilwin</div>
+                </td>
+                <td>
+                    <input class="input hidden"  id='bilwin-init' type='number'>
+                    <div class="field">0</div>
+                </td>
+                <td>
+                    <input class="input hidden"  id='bilwin-type' type='text' value='player'>
+                    <div class="field">player</div>
+                </td>
+                <td>
+                    <input class="input hidden"  id='bilwin-currenthp' type='number' value='43'>
+                    <div class="field">43</div>
+                </td>
+                <td>
+                    <input class="input hidden"  id='bilwin-totalhp' type='number' value='43'>
+                    <div class="field">43</div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button id="addCombatantButton">Add Combatant</button>
+    <button id="editCombatants">Edit</button>
+
+    <!-- Modal for user input -->
+    <div id="myModal" class="modal">
+        <label for="name">Name:</label>
+        <input type="text" id="name">
+
+        <label for="type">Type:</label>
+        <input type="text" id="type">
+
+        <label for="hitpoints">Hitpoints:</label>
+        <input type="text" id="hitpoints">
+
+        <button id="modalSubmit">Submit</button>
+        <button id="modalCancel">Cancel</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
