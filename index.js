@@ -127,10 +127,18 @@ encounterTable.addEventListener('drop', function (e) {
     }
 });
 
+
 encounterTable.addEventListener('click', function(e) {
     if (e.target) {
-      const tableRow = e.target.closest('tr');
-      tableRow.classList.toggle('selected');
+        const rows = document.querySelectorAll('#encounterbody tr');
+
+        rows.forEach(row => {
+            if (row === e.target.closest('tr')) {
+                row.classList.toggle(`selected`);
+            } else if (row.classList.contains(`selected`)) {
+                row.classList.toggle(`selected`);
+            }
+        })
     }
   });
 
@@ -187,18 +195,18 @@ function clearModal() {
     modal.style.display = 'none';
 }
 
-const rows = document.querySelectorAll('#encounterbody tr');
+// const rows = document.querySelectorAll('#encounterbody tr');
 
-rows.forEach(row => {
-    row.addEventListener('click', () => {
-        // Toggle 'selected' class on the clicked row
-        row.classList.toggle('selected');
+// rows.forEach(row => {
+//     row.addEventListener('click', () => {
+//         // Toggle 'selected' class on the clicked row
+//         row.classList.toggle('selected');
         
-        // Remove 'selected' class from all other rows
-        rows.forEach(r => {
-            if (r !== row) {
-                r.classList.remove('selected');
-            }
-        });
-    });
-});
+//         // Remove 'selected' class from all other rows
+//         rows.forEach(r => {
+//             if (r !== row) {
+//                 r.classList.remove('selected');
+//             }
+//         });
+//     });
+// });
