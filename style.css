@@ -63,4 +63,20 @@ th {
     width: 200px;
 }
 
+input:invalid {
+    border: 1px solid red;
+}
+
+input:valid {
+    border: 1px solid green;
+}
+
+.invalid {
+    border: 1px solid red;
+}
+
+.error, .invalid-label {
+    color: red;
+    font-weight: bold;
+}
 
